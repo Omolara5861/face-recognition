@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background: url('beautiful-color-ui-gradients-backgrounds-frost.png')center/cover no-repeat;
+}
+
+canvas {
+    position: absolute;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-container {
+    width: 400px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -o-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2);
+    margin: 5px auto;
+    padding: 10px 0;
+}
+
+.result-container>div {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    margin: 5px 0;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+
+    video {
+    width: 100%;
+    }
