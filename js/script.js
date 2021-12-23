@@ -32,7 +32,7 @@
     isScreenSmall.addListener(screenResize);
 
     /****Event Listeiner for the video****/
-    video.addEventListener("playing", () => {
+    video.addEventListener("play", () => {
     const canvas = faceapi.createCanvasFromMedia(video);
     document.body.append(canvas);
 
@@ -41,7 +41,7 @@
 
     setInterval(async () => {
         const detections = await faceapi
-        .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
+        .detectSingleFace(video, new faceapi.TinyFaceDetectorOptions())
         .withFaceLandmarks()
         .withFaceExpressions()
         .withAgeAndGender();
@@ -57,7 +57,7 @@
         if (resizedDetections && Object.keys(resizedDetections).length > 0) {
         const age = resizedDetections.age;
         let interpolatedAge = interpolateAgePredictions(age);
-        interpolatedAge = interpolatedAge.toFixed;
+        interpolatedAge =  Math.floor(interpolatedAge);
         const gender = resizedDetections.gender;
         const expressions = resizedDetections.expressions;
         const maxValue = Math.max(...Object.values(expressions));

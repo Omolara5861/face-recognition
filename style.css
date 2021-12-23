@@ -9,6 +9,7 @@ body {
     align-items: center;
     text-align: center;
     color: #fff;
+    overflow-x: hidden;
     background: url('beautiful-color-ui-gradients-backgrounds-frost.png')center/cover no-repeat;
 
 }
@@ -29,7 +30,8 @@ canvas {
     text-align: left;
 }
 
-.result-container>div {
+.result-container > p {
+    color: #fff;
     font-size: 1.3rem;
     padding: 0.3rem;
     margin: 5px 0;
